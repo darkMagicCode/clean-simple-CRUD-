@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap - fa - all src/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap - fa - all src/all.min.css">
+        <link rel="stylesheet" href="my files/style.css">
+    </head>
+    <body>
+
+        <div class=" container   my-5">
+
+  
+  <div class="modal fade  " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">  
+      <div class="modal-content">
+        <div class="modal-header">
+            <h3 class=" fw-bolder text-capitalize"> product form </h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          <div class=" bg-light">         
+             <label  for="productNameInput "class="h6 text-capitalize">product </label>
+             <input id="productNameInput" placeholder="product name " class="mb-3 shadow-sm form-control mb-2" type="text">
+        <div id ="nameAlert" class=" alert alert-danger d-none ">your name should be upper case and lower case only</div>
+             <label for="productPriceInput" class="text-capitalize h6">price </label>
+             <input id="productPriceInput" placeholder="price" class="mb-3 shadow-sm form-control mb-2" type="text">
+             <div id ="priceAlert" class=" alert alert-danger d-none ">your name should numbers</div>
+
+             <label for="productcategoryInput"class="text-capitalize h6">category Name</label>
+             <input id="productcategoryInput" placeholder="category " class="mb-3 shadow-sm form-control mb-2" type="text">
+        
+             <label for="productdescriptionInput"  class=" text-capitalize h6">description  </label>
+             <textarea id="productdescriptionInput" placeholder="description" class="mb-3 shadow-sm form-control mb-2" type="text"></textarea>
+             <label for="imges" class=" mb-2 fw-bolder text-capitalize">enter product img</label>
+             <input type="file" id="imges" class="mb-3 d-block form-control  ">
+       </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button  type="" id="addButton" class="my-3 text-capitalize btn btn-success fw-bolder py-2 w-50 rounded-pill">add product</button>
+          <button  type="" id="updateButton" class="my-3 text-capitalize btn btn-success fw-bolder py-2 w-50 rounded-pill">update product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class=" bg-opacity-75 bg-secondary d-flex  px-5 justify-content-between  align-items-center ">
+
+  <input  class="  placeholder-wave bg-light bg-opacity-50 d-inline  my-4 w-25  form-control" placeholder=" search........." id="searchInput" type="text" name="" value="">
+
+  <h1 class="fs-2 text-black ">Product mangment</h1>
+
+  <div>
+      <button type="button" id="addbtn" class="rounded-pill px-4 py-2 me-2 btn btn-dark"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+       <i class=" fa fa-solid fa-plus-circle text-success px-1"></i> ADD Product
+      </button>
+      <button disabled  data-bs-toggle="modal" data-bs-target="#exampleModalb" type="button" id="delbtn" class=" rounded-pill px-4 py-2 ms-2 btn btn-dark">
+       <i  class=" fa fa-solid fa-plus-circle text-danger px-1"></i> DEL Product
+      </button>
+  </div>
+
+
+
+</div>
+
+
+
+      <table class="  text-center table table-striped table-dark ">
+      <thead>
+      <th > <input type="checkbox" id="selectAll"></th>
+      <th >name</th>
+      <th>price</th>
+      <th>category</th>
+      <th>des</th>
+      <th> Edit</th>
+      
+      </thead>
+      <tbody id="tableBody">
+
+
+      </tbody>
+
+    
+  </table>
+  
+
+</div>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModala">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModala" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div id="modal-dialog" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="text-capitalize modal-title" id="exampleModalLabel"> <i class=" text-danger fa fa-solid fa-warning" > </i> are you sure you want to delete this </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        you about to delete imprtant files
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="delBtnFinal" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModalb" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div id="modal-dialog" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="text-capitalize modal-title" id="exampleModalLabelb"> <i class=" text-warning fa fa-solid fa-warning" > </i> are you sure you want to delete this </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        you about to delete 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="delBtnFinalb" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>        <script src="my files/index.js" ></script>
+    </body>
+</html>
